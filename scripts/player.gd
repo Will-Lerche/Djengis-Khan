@@ -1,7 +1,15 @@
 extends KinematicBody2D
-
+const bulletPath = preload('res://scenes/Projectiles.tscn')
 var velo : Vector2 = Vector2()
 var direction : Vector2 = Vector2() 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		shoot()
+func shoot():
+	var bullet = bulletPath.instance()
+	
+	get_parent().add_child(bullet)
+	bullet.position = $Position2D.global_position
 func read_input():
 	if Input.is_action_pressed("up"):
 		velo.y -= 1
