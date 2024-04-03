@@ -5,11 +5,14 @@ var direction : Vector2 = Vector2()
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		shoot()
+	$Node2D.look_at(get_global_mouse_position())
 func shoot():
 	var bullet = bulletPath.instance()
 	
 	get_parent().add_child(bullet)
-	bullet.position = $Position2D.global_position
+	bullet.position = $Node2D/Position2D.global_position
+	
+	bullet.velocity = get_global_mouse_position() - bullet.position
 func read_input():
 	if Input.is_action_pressed("up"):
 		velo.y -= 1

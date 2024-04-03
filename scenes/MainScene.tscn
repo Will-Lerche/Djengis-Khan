@@ -519,3 +519,5 @@ texture = ExtResource( 7 )
 [node name="Grass" type="Sprite" parent="."]
 position = Vector2( 57, 78 )
 texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
