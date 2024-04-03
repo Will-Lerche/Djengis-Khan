@@ -1,8 +1,7 @@
-extends Area2D
+extends KinematicBody2D
 
-var velocity = Vector2(0,0)
+var velocity = Vector2(1, 0)
 var speed = 300
 
 func _physics_process(delta):
-	
-	var collision = move_and_collide(velocity.normalized() * delta * speed)
+	var collision_info = move_and_collide(velocity.normalized() * delta * speed)

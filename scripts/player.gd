@@ -1,5 +1,5 @@
 extends KinematicBody2D
-const bulletPath = preload('res://scenes/Projectiles.tscn')
+const bulletPath = preload("res://scenes/Projectiles.tscn")
 var velo : Vector2 = Vector2()
 var direction : Vector2 = Vector2() 
 func _process(delta):

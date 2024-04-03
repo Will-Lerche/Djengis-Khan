@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Atlas.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/River.png" type="Texture" id=5]
 [ext_resource path="res://assets/River Right.png" type="Texture" id=6]
 [ext_resource path="res://assets/River Left.png" type="Texture" id=7]
+[ext_resource path="res://scenes/Projectiles.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -44,7 +45,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=14]
 0/name = "Atlas.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -490,7 +491,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 14 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 32
 show_collision = true
@@ -500,7 +501,8 @@ tile_data = PoolIntArray( -327687, 4, 0, -327686, 2, 0, -327685, 2, 0, -327684, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
+
+[node name="Node2D" parent="." instance=ExtResource( 8 )]
 
 [node name="River" type="Sprite" parent="."]
 position = Vector2( -168, 46 )

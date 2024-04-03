@@ -4,14 +4,13 @@
 [ext_resource path="res://scenes/Projectiles.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 4 )
 
-[node name="Projectiles" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Pil" type="Sprite" parent="."]
-scale = Vector2( 0.296875, 0.125 )
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
