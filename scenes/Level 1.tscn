@@ -209,6 +209,4 @@ tile_data = PoolIntArray( -458759, 8, 0, -458758, 8, 0, -458757, 8, 0, -458756, 
 [node name="Decor" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, 5 )
+tile_data = PoolIntArray( 327665, 0, 0 )
