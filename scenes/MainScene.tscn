@@ -1,12 +1,8 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/Atlas.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/pixil-layer-1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Grass.png" type="Texture" id=4]
-[ext_resource path="res://assets/River.png" type="Texture" id=5]
-[ext_resource path="res://assets/River Right.png" type="Texture" id=6]
-[ext_resource path="res://assets/River Left.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Projectiles.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Enemies.tscn" type="PackedScene" id=9]
 
@@ -508,19 +504,3 @@ current = true
 
 [node name="Enemies" parent="." instance=ExtResource( 9 )]
 position = Vector2( 223, -101 )
-
-[node name="River" type="Sprite" parent="."]
-position = Vector2( -168, 46 )
-texture = ExtResource( 5 )
-
-[node name="RiverRight" type="Sprite" parent="."]
-position = Vector2( -147, -68 )
-texture = ExtResource( 6 )
-
-[node name="RiverLeft" type="Sprite" parent="."]
-position = Vector2( -67, 95 )
-texture = ExtResource( 7 )
-
-[node name="Grass" type="Sprite" parent="."]
-position = Vector2( 57, 78 )
-texture = ExtResource( 4 )
