@@ -49,10 +49,7 @@ func handle_input():
 	
 func take_damage(damage):
 	hp -= damage
-	print("AVVV" + str(hp))
 	if hp <=0:
-		#pass
-		print("take damage metode queue_free")
 		queue_free()
 
 func _physics_process(delta):
@@ -65,8 +62,13 @@ func _physics_process(delta):
 		print("collider er ",collider.get_class())
 		if collider.get_class() == "Enemy":
 			take_damage(BULLET_DAMAGE)
-		#if collider.has_method("take_damage"):
-		#	collider.take_damage(BULLET_DAMAGE)
+		if collider.get_class() == "Enemy":
+			take_damage(BULLET_DAMAGE)
+		elif collider.get_class() == "MainMap":
+			Level1()
+
 
 func get_class():
 	return "Player"
+func Level1():
+	get_tree().change_scene_to(load("res://scenes/Level 1.tscn"))
