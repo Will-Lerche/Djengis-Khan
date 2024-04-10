@@ -507,6 +507,7 @@ current = true
 [node name="Projectiles" parent="." instance=ExtResource( 8 )]
 
 [node name="Enemies" parent="." instance=ExtResource( 9 )]
+position = Vector2( 223, -101 )
 
 [node name="River" type="Sprite" parent="."]
 position = Vector2( -168, 46 )
