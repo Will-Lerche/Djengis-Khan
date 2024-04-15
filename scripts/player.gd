@@ -13,7 +13,7 @@ const BULLET_DAMAGE = 1
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		shoot()
-	$Node2D.look_at(get_global_mouse_position())
+	$Node2D2.look_at(get_global_mouse_position())
 	handle_input()
 func shoot():
 	var bullet = preload("res://scenes/Projectiles.tscn").instance()
