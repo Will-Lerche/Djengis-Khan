@@ -1109,12 +1109,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 762 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-
 [node name="Environment" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -1130,3 +1124,9 @@ tile_data = PoolIntArray( -1769479, 30, 0, -1769478, 31, 0, -1769476, 33, 0, -17
 [node name="Enemies" parent="." instance=ExtResource( 3 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 762 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
