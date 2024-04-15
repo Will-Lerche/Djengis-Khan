@@ -506,4 +506,3 @@ current = true
 
 [node name="Enemies" parent="." instance=ExtResource( 9 )]
 position = Vector2( 223, -101 )
-speed = null

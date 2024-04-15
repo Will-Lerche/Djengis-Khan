@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paper background.png-55f971a711a959d83b8c377dfa2a227a.stex"
+path="res://import/paper background.png-55f971a711a959d83b8c377dfa2a227a.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/paper background.png"
-dest_files=[ "res://.import/paper background.png-55f971a711a959d83b8c377dfa2a227a.stex" ]
+dest_files=[ "res://import/paper background.png-55f971a711a959d83b8c377dfa2a227a.stex" ]
 
 [params]
 
