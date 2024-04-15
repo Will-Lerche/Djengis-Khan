@@ -9,13 +9,31 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://scripts/Enemies.gd"
+}, {
 "base": "TileMap",
 "class": "MainMap",
 "language": "GDScript",
 "path": "res://scenes/MainMap.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/player.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://scripts/Projectiles.gd"
 } ]
 _global_script_class_icons={
-"MainMap": ""
+"Enemy": "",
+"MainMap": "",
+"Player": "",
+"Projectile": ""
 }
 
 [application]
