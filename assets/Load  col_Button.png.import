@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Load  col_Button.png-816934b3d934b8d06b01405fff223fa5.stex"
+path="res://import/Load  col_Button.png-816934b3d934b8d06b01405fff223fa5.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/Load  col_Button.png"
-dest_files=[ "res://.import/Load  col_Button.png-816934b3d934b8d06b01405fff223fa5.stex" ]
+dest_files=[ "res://import/Load  col_Button.png-816934b3d934b8d06b01405fff223fa5.stex" ]
 
 [params]
 

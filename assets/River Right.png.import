@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/River Right.png-8a6ac9956b2e3f8e0fc0ca4bdc5d4791.stex"
+path="res://import/River Right.png-8a6ac9956b2e3f8e0fc0ca4bdc5d4791.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/River Right.png"
-dest_files=[ "res://.import/River Right.png-8a6ac9956b2e3f8e0fc0ca4bdc5d4791.stex" ]
+dest_files=[ "res://import/River Right.png-8a6ac9956b2e3f8e0fc0ca4bdc5d4791.stex" ]
 
 [params]
 

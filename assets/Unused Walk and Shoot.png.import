@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Unused Walk and Shoot.png-b3d3cebeff9f7fcb6ab260ce38aa1f03.stex"
+path="res://import/Unused Walk and Shoot.png-b3d3cebeff9f7fcb6ab260ce38aa1f03.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/Unused Walk and Shoot.png"
-dest_files=[ "res://.import/Unused Walk and Shoot.png-b3d3cebeff9f7fcb6ab260ce38aa1f03.stex" ]
+dest_files=[ "res://import/Unused Walk and Shoot.png-b3d3cebeff9f7fcb6ab260ce38aa1f03.stex" ]
 
 [params]
 

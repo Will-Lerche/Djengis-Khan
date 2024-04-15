@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Start  col_Button.png-ee7421d7eb456eca593fc933a3af5987.stex"
+path="res://import/Start  col_Button.png-ee7421d7eb456eca593fc933a3af5987.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/Start  col_Button.png"
-dest_files=[ "res://.import/Start  col_Button.png-ee7421d7eb456eca593fc933a3af5987.stex" ]
+dest_files=[ "res://import/Start  col_Button.png-ee7421d7eb456eca593fc933a3af5987.stex" ]
 
 [params]
 

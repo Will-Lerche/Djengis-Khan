@@ -10,6 +10,8 @@ var hp = 1000
 const BULLET_SPEED = 500
 const BULLET_DAMAGE = 1
 
+
+
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		shoot()

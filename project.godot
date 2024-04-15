@@ -40,6 +40,7 @@ _global_script_class_icons={
 
 config/name="Djengis Khan"
 run/main_scene="res://scenes/MainScene.tscn"
+config/use_hidden_project_data_directory=false
 config/icon="res://icon.png"
 
 [gui]
