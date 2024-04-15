@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="slot_gui" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Background" type="Sprite" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0

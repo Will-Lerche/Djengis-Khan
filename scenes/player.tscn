@@ -84,7 +84,7 @@ current = true
 
 [node name="Horse" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 7 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Djengis bue" type="AnimatedSprite" parent="Player"]
