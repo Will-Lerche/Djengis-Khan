@@ -70,6 +70,12 @@ right={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Projectiles"
+2d_physics/layer_2="Fjender"
+2d_physics/layer_3="Spiller"
+
 [physics]
 
 common/enable_pause_aware_picking=true

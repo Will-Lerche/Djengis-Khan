@@ -23,8 +23,6 @@ func shoot():
 	bullet.velocity = direction * BULLET_SPEED
 	get_parent().add_child(bullet)
 	bullet.global_position = global_position
-	
-	bullet.velocity = get_global_mouse_position() - bullet.position
 
 func handle_input():
 	#print("hej")
