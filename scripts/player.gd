@@ -16,8 +16,8 @@ func _process(delta):
 	
 	
 	if velo.length() < 1:
-		$Horse.playing = false
-		$"Djengis bue".playing = false
+		$Horse.play("Idle")
+		$Djengis.play("Idle Bue")
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		shoot()
@@ -32,29 +32,29 @@ func shoot():
 	bullet.global_position = global_position
 
 func handle_input():
-	#print("hej")
+	
 	
 	if Input.is_action_pressed("up"):
 		print("Up key pressed")
 		velo.y -= 1
 		direction = Vector2(0, -1)
-		$Horse.playing = true
-		$"Djengis bue".playing = true
+		$Horse.play("Run")
+		$Djengis.play("Idle Bue")
 	if Input.is_action_pressed("right"):
 		velo.x += 1
 		direction = Vector2(0, 1)
-		$Horse.playing = true
-		$"Djengis bue".playing = true
+		$Horse.play("Run")
+		$Djengis.play("Idle Bue")
 	if Input.is_action_pressed("left"):
 		velo.x -= 1
 		direction = Vector2(-1, 0)
-		$Horse.playing = true
-		$"Djengis bue".playing = true
+		$Horse.play("Run")
+		$Djengis.play("Idle Bue")
 	if Input.is_action_pressed("down"):
 		velo.y += 1
 		direction = Vector2(1, 0)
-		$Horse.playing = true
-		$"Djengis bue".playing = true
+		$Horse.play("Run")
+		$Djengis.play("Idle Bue")
 		
 	if !Input.is_action_pressed("up") and !Input.is_action_pressed("down") and !Input.is_action_pressed("right") and !Input.is_action_pressed("left"):
 		velo = Vector2(0, 0)
