@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://import/Horse-run Sheet.png-2e936ab5a292676d06cbc63f412c439f.stex"
+path="res://import/Genghis-Sheet_melee_idle.png-75c310aa6e19a9322b3dee0cc766f035.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Horse-run Sheet.png"
-dest_files=[ "res://import/Horse-run Sheet.png-2e936ab5a292676d06cbc63f412c439f.stex" ]
+source_file="res://assets/Genghis-Sheet_melee_idle.png"
+dest_files=[ "res://import/Genghis-Sheet_melee_idle.png-75c310aa6e19a9322b3dee0cc766f035.stex" ]
 
 [params]
 
