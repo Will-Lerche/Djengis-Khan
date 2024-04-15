@@ -13,10 +13,17 @@ const BULLET_DAMAGE = 1
 
 
 func _process(delta):
+	
+	
+	if velo.length() < 1:
+		$Horse.playing = false
+		$"Djengis bue".playing = false
+	
 	if Input.is_action_just_pressed("ui_accept"):
 		shoot()
 	$Node2D2.look_at(get_global_mouse_position())
 	handle_input()
+
 func shoot():
 	var bullet = preload("res://scenes/Projectiles.tscn").instance()
 	var direction = (get_global_mouse_position() - global_position).normalized()
@@ -31,15 +38,23 @@ func handle_input():
 		print("Up key pressed")
 		velo.y -= 1
 		direction = Vector2(0, -1)
+		$Horse.playing = true
+		$"Djengis bue".playing = true
 	if Input.is_action_pressed("right"):
 		velo.x += 1
 		direction = Vector2(0, 1)
+		$Horse.playing = true
+		$"Djengis bue".playing = true
 	if Input.is_action_pressed("left"):
 		velo.x -= 1
 		direction = Vector2(-1, 0)
+		$Horse.playing = true
+		$"Djengis bue".playing = true
 	if Input.is_action_pressed("down"):
 		velo.y += 1
 		direction = Vector2(1, 0)
+		$Horse.playing = true
+		$"Djengis bue".playing = true
 		
 	if !Input.is_action_pressed("up") and !Input.is_action_pressed("down") and !Input.is_action_pressed("right") and !Input.is_action_pressed("left"):
 		velo = Vector2(0, 0)
