@@ -1,18 +1,26 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Gui/Healthbubble.gd" type="Script" id=1]
-[ext_resource path="res://Gui PNG/Health.png" type="Texture" id=2]
+[ext_resource path="res://Gui PNG/Health2.png" type="Texture" id=2]
 [ext_resource path="res://Gui PNG/Health outer.png" type="Texture" id=3]
-[ext_resource path="res://Gui PNG/Health2.png" type="Texture" id=4]
+[ext_resource path="res://Gui PNG/Health.png" type="Texture" id=4]
 
-[node name="Healthbar" type="Node2D"]
-
-[node name="Healthbubble" type="TextureProgress" parent="."]
+[node name="Health" type="TextureProgress"]
 margin_right = 40.0
 margin_bottom = 40.0
-texture_under = ExtResource( 2 )
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 0, 62 )
+
+[node name="Healthbubble" type="TextureProgress" parent="."]
+anchor_top = 3.162
+anchor_bottom = 3.162
+margin_top = -126.48
+margin_right = 40.0
+margin_bottom = -86.48
+rect_min_size = Vector2( 50, 50 )
+texture_under = ExtResource( 4 )
 texture_over = ExtResource( 3 )
-texture_progress = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
 fill_mode = 3
 tint_progress = Color( 0.623529, 0.00784314, 0.00784314, 1 )
 script = ExtResource( 1 )
