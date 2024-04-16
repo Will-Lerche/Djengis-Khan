@@ -6,6 +6,7 @@ var hp = 5
 
 var playerContact : Player = null
 
+
 func take_damage(damage):
 	hp -= damage
 	if hp <= 0:
@@ -13,6 +14,7 @@ func take_damage(damage):
 
 func _physics_process(delta):
 	var player = get_parent().get_node("Player")
+	print(player.global_position)
 	#print("beregn enemy position")
 	#position = position - position.normalized()
 	$Enemy.play("Idle")

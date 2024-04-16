@@ -22,8 +22,8 @@ func _input(event):
 			elif Input.is_action_pressed("Hotbar_slot_3"):
 				switch_to_slot(2)
 			elif Input.is_action_pressed("ui_accept") and current_slot == 0:
-				get_parent().get_parent().get_node("Player").get_node("Player").shoot()
-				print(get_parent().get_parent().get_node("Player").get_node("Player"))
+				get_parent().get_parent().get_node("Player").shoot()
+			
 
 func switch_to_slot(slot_index):
 	if slot_index != current_slot:

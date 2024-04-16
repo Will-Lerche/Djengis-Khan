@@ -19,7 +19,7 @@ func _process(delta):
 		$Horse.play("Idle")
 		$Djengis.play("Idle Bue")
 	
-	$Node2D2.look_at(get_global_mouse_position())
+	#$Player.look_at(get_global_mouse_position())
 	handle_input()
 
 func shoot():
@@ -36,7 +36,6 @@ func handle_input():
 	
 	
 	if Input.is_action_pressed("up"):
-		print("Up key pressed")
 		velo.y -= 1
 		direction = Vector2(0, -1)
 		$Horse.play("Run")
@@ -75,7 +74,7 @@ func _physics_process(delta):
 		
 		#queue_free()
 		var collider = collision.collider
-		print("collider er ",collider.get_class())
+		
 		if collider.get_class() == "Enemy":
 			take_damage(BULLET_DAMAGE)
 		if collider.get_class() == "Enemy":
