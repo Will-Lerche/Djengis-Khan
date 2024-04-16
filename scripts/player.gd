@@ -19,8 +19,6 @@ func _process(delta):
 		$Horse.play("Idle")
 		$Djengis.play("Idle Bue")
 	
-	if Input.is_action_just_pressed("ui_accept"):
-		shoot()
 	$Node2D2.look_at(get_global_mouse_position())
 	handle_input()
 

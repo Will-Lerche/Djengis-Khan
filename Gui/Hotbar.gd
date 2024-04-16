@@ -23,7 +23,7 @@ func _input(event):
 				switch_to_slot(2)
 			elif Input.is_action_pressed("ui_accept") and current_slot == 0:
 				get_parent().get_parent().get_node("Player").get_node("Player").shoot()
-				#print(get_parent().get_parent().get_node("Player").get_node("Player"))
+				print(get_parent().get_parent().get_node("Player").get_node("Player"))
 
 func switch_to_slot(slot_index):
 	if slot_index != current_slot:
