@@ -204,7 +204,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
-"loop": true,
+"loop": false,
 "name": "Bue skift",
 "speed": 5.0
 }, {
@@ -224,7 +224,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
-"loop": true,
+"loop": false,
 "name": "Melee skift",
 "speed": 5.0
 } ]
@@ -233,7 +233,7 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.01
+wait_time = 0.75
 
 [node name="Player" type="KinematicBody2D" parent="."]
 collision_mask = 2

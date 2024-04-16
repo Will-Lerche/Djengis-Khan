@@ -9,7 +9,7 @@ var direction : Vector2 = Vector2()
 var hp = 1000
 const BULLET_SPEED = 500
 const BULLET_DAMAGE = 1
-
+onready var bullet = preload("res://scenes/Projectiles.tscn")
 
 
 func _process(delta):
@@ -25,12 +25,14 @@ func _process(delta):
 	handle_input()
 
 func shoot():
-	var bullet = preload("res://scenes/Projectiles.tscn").instance()
+
 	var direction = (get_global_mouse_position() - global_position).normalized()
-	bullet.look_at (direction)
-	bullet.velocity = direction * BULLET_SPEED
-	get_parent().add_child(bullet)
-	bullet.global_position = global_position
+	var bullet_instance = bullet.instance()
+	get_parent().add_child(bullet_instance)
+	bullet_instance.look_at (direction)
+	bullet_instance.velocity = direction * BULLET_SPEED
+	bullet_instance.global_position = global_position
+	
 
 func handle_input():
 	
