@@ -44,7 +44,7 @@ func _on_Enemies_body_entered(body):
 		
 	if body.get_class() == "Projectile":
 		take_damage(1)
-		print("ARGGHHH SIGER ENEMY")
+		#print("ARGGHHH SIGER ENEMY")
 	pass # Replace with function body.
 
 
