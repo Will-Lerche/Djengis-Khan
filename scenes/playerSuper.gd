@@ -23,11 +23,11 @@ func _on_Timer_timeout():
 	enemy.position = Vector2(rndX,rndY)
 
 	
-
-	$Player.get_parent().add_child(enemy)
+	if $Player != null:
+		$Player.get_parent().add_child(enemy)
+		enemy.position = Vector2(rndX, rndY) + $Player.position
+		print("Enemy spawn ", enemy.position)
 	
-	enemy.position = Vector2(rndX, rndY) + $Player.position
-	print("Enemy spawn ", enemy.position)
 	#enemy.global_position = get_parent().global_position 
 	#print("SPAWN enemy", enemy.get_parent().global_position)
 
