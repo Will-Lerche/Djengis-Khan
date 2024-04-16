@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Gui/hotbar_slot.gd" type="Script" id=1]
+[ext_resource path="res://Gui PNG/Hotbar.png" type="Texture" id=2]
+[ext_resource path="res://Gui PNG/CD.png" type="Texture" id=3]
 
 [node name="HotbarSlot" type="Button"]
-margin_right = 26.0
+margin_right = 32.0
 margin_bottom = 32.0
+rect_min_size = Vector2( 64, 64 )
 script = ExtResource( 1 )
-
-[node name="Background" type="Sprite" parent="."]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 50.0
 margin_bottom = 42.0
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
