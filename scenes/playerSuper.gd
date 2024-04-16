@@ -8,7 +8,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	if merkit == 0:
-		print("WIN!!!")
+		get_tree().change_scene_to(load("res://scenes/MainScene.tscn")) 
 		
 	
 	merkit = merkit - 1
