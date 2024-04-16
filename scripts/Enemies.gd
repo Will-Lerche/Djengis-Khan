@@ -13,20 +13,24 @@ func take_damage(damage):
 
 func _physics_process(delta):
 	var player = get_parent().get_node("Player")
-	
+	#print("beregn enemy position")
+	#position = position - position.normalized()
 	$Enemy.play("Idle")
-	
+#
+		
+
 	if playerContact != null:
 		playerContact.take_damage(1)
-	
+
 	if player != null:
 		var player_position = player.position
 		var target_position = (player_position - position).normalized()
-	 
+
+
 		if position.distance_to(player_position) > 3:
 			target_position = position - player_position
 			position = position - target_position.normalized()
-		
+
 		if position.distance_to(player_position) < 2:
 			$Enemy.play("Attack")
 

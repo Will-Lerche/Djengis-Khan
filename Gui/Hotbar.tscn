@@ -7,15 +7,15 @@ margin_right = 239.0
 margin_bottom = 64.0
 
 [node name="HotbarSlot" parent="." instance=ExtResource( 1 )]
-margin_right = 64.0
+margin_right = 12.0
 margin_bottom = 64.0
 
 [node name="HotbarSlot2" parent="." instance=ExtResource( 1 )]
-margin_left = 75.0
-margin_right = 139.0
+margin_left = 16.0
+margin_right = 28.0
 margin_bottom = 64.0
 
 [node name="HotbarSlot3" parent="." instance=ExtResource( 1 )]
-margin_left = 150.0
-margin_right = 214.0
+margin_left = 32.0
+margin_right = 44.0
 margin_bottom = 64.0
