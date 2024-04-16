@@ -97,25 +97,25 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	if response['response']['size'] > 0:
 		$TextEdit.set_text("")
 		for n in (response['response']['size']):
-			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['player_name']) + "\t\t" + String(response['response'][String(n)]['score']) + "\n")
+			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['player_name']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\n")
 	else:	
 		$TextEdit.set_text("No data")
 	
 	
 
 	
-func _submit_score():
+func _submit_Time():
 	var user_name = $PlayerName.get_text()
-	var score = $Score.get_text()
-	var command = "add_score"
-	var data = {"username" : user_name, "score" : score}
+	var Time = $Time.get_text()
+	var command = "add_Time"
+	var data = {"username" : user_name, "Time" : Time}
 	request_queue.push_back({"command" : command, "data" : data})
 	
-func _get_scores():
-	var command = "get_scores"
-	var data = {"score_ofset" : 0, "score_number" : 10}
+func _get_Times():
+	var command = "get_Times"
+	var data = {"Time_ofset" : 0, "Time_number" : 10}
 	request_queue.push_back({"command" : command, "data" : data})
-	print("get scores")
+	print("get Times")
 
 func _get_player():
 	var user_id = $ID.get_text()
@@ -135,9 +135,9 @@ func _on_GetPlayer():
 	pass # Replace with function body.
 
 
-func _on_GetScores_pressed():
+func _on_GetTimes_pressed():
 	pass # Replace with function body.
 
 
-func _on_AddScore_pressed():
+func _on_AddTime_pressed():
 	pass # Replace with function body.
