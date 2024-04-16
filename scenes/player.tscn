@@ -259,10 +259,11 @@ frames = SubResource( 7 )
 frame = 1
 playing = true
 
-[node name="Djengis bue" type="AnimatedSprite" parent="Player"]
+[node name="Djengis" type="AnimatedSprite" parent="Player"]
 position = Vector2( 0, -12 )
 frames = SubResource( 45 )
 animation = "Melee skift"
+frame = 2
 playing = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
