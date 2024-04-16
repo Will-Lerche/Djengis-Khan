@@ -27,6 +27,7 @@ func _process(delta):
 func shoot():
 	var bullet = preload("res://scenes/Projectiles.tscn").instance()
 	var direction = (get_global_mouse_position() - global_position).normalized()
+	bullet.look_at (direction)
 	bullet.velocity = direction * BULLET_SPEED
 	get_parent().add_child(bullet)
 	bullet.global_position = global_position

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://import/Chinese enemy 1ready-Sheet.png-73c9fe5d47381acfb528278477dae376.stex"
+path="res://import/pil.png-0753ae6c92b43b6f0180acd0c65302f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Chinese enemy 1ready-Sheet.png"
-dest_files=[ "res://import/Chinese enemy 1ready-Sheet.png-73c9fe5d47381acfb528278477dae376.stex" ]
+source_file="res://assets/pil.png"
+dest_files=[ "res://import/pil.png-0753ae6c92b43b6f0180acd0c65302f4.stex" ]
 
 [params]
 
