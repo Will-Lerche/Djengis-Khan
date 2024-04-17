@@ -1157,15 +1157,13 @@ anchor_bottom = 1.0
 margin_top = 59.0
 margin_bottom = 99.0
 
-[node name="Label" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 468.0
-margin_bottom = 165.0
+[node name="Story_text" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
+margin_left = -387.0
+margin_top = -82.5
+margin_right = 387.0
+margin_bottom = 82.5
+text = "Early Campaigns, In Burkhan Khaldun around the year 1200
+                         300 Merkits"
 
 [node name="Xp_label" type="Label" parent="Level1/CanvasLayer"]
 anchor_left = 0.5

@@ -66,10 +66,23 @@ func handle_input():
 	
 	velo = velo.normalized()
 	
+onready var _HP_Orb = get_parent().get_node("CanvasLayer/Health/Healthbubble")
+const MAX_health = 1000
+
+func healthBubble():
+	set_health_bubble()
+	_HP_Orb.max_value = MAX_health
+	
+
+func set_health_bubble()-> void:
+	_HP_Orb.value = hp
+
+	
 func take_damage(damage):
 	hp -= damage
 	if hp <=0:
 		queue_free()
+	set_health_bubble()
 
 func _physics_process(delta):
 	handle_input()

@@ -46,11 +46,11 @@ func _on_Enemies_body_entered(body):
 		
 	if body.get_class() == "Projectile":
 		take_damage(1)
-		#print("ARGGHHH SIGER ENEMY")
-	pass # Replace with function body.
+		
+	pass
 
 
 func _on_Enemies_body_exited(body):
 	if body.get_class() == "Player":
 		playerContact = null
-	pass # Replace with function body.
+	pass
