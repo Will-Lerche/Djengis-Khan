@@ -14,7 +14,7 @@ func take_damage(damage):
 
 func _physics_process(delta):
 	var player = get_parent().get_node("Player")
-	print(player.global_position)
+	
 	#print("beregn enemy position")
 	#position = position - position.normalized()
 	$Enemy.play("Idle")

@@ -7,7 +7,7 @@ var current_slot = 0
 
 
 func _ready():
-	hotbar_slots = [$HotbarSlot, $HotbarSlot2, $HotbarSlot3]
+	hotbar_slots = [$HotbarSlot, $HotbarSlot2]
 
 func _process(delta):
 	pass 

@@ -50,23 +50,23 @@ margin_bottom = 256.0
 
 [node name="LabScore" type="Label" parent="."]
 margin_left = 512.0
-margin_top = 448.0
+margin_top = 468.0
 margin_right = 614.0
-margin_bottom = 512.0
+margin_bottom = 532.0
 text = "Score"
 
 [node name="LabName" type="Label" parent="."]
 margin_left = 512.0
-margin_top = 320.0
+margin_top = 340.0
 margin_right = 614.0
-margin_bottom = 385.0
+margin_bottom = 405.0
 text = "Player name"
 
 [node name="LabID" type="Label" parent="."]
 margin_left = 512.0
-margin_top = 192.0
+margin_top = 220.0
 margin_right = 614.0
-margin_bottom = 257.0
+margin_bottom = 285.0
 text = "Player ID"
 
 [node name="TextEdit" type="TextEdit" parent="."]
