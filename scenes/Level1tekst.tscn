@@ -7,6 +7,20 @@ size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="GDScript" id=2]
+script/source = "extends Label
+
+func _ready() -> void:
+	
+	$Tween.interpolate_property(
+		self, \"percent_visible\",
+		0.0,1.0,3.0, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$Tween.start()
+
+
+
+
+func _on_Timer_timeout():
+	hide()"
 
 [node name="Label" type="Label"]
 anchor_left = 0.5
@@ -23,3 +37,9 @@ text = "Early Campaigns,
 Burkhan Khaldun, 1200
 300 Merkits"
 script = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
