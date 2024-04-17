@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Gui PNG/EXP_bar.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Level 1.gd" type="Script" id=3]
 [ext_resource path="res://Gui/Hotbar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Gui/Health.tscn" type="PackedScene" id=5]
@@ -1250,11 +1251,27 @@ margin_top = -64.0
 margin_right = 64.0
 margin_bottom = 0.0
 
+[node name="ExperienceBar" parent="Level1/CanvasLayer" instance=ExtResource( 12 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -135.0
+margin_right = 109.0
+margin_bottom = -36.0
+rect_scale = Vector2( 2, 2 )
+value = 50.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+tint_under = Color( 0.231373, 0.223529, 0.223529, 1 )
+tint_progress = Color( 0.247059, 0.423529, 0.694118, 1 )
+
 [node name="Health" parent="Level1/CanvasLayer" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = 59.0
-margin_bottom = 99.0
+margin_left = 3.0
+margin_top = 40.0
+margin_bottom = 81.0
 
 [node name="Story_text" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
 margin_left = -387.0
@@ -1268,13 +1285,6 @@ text = "Early Campaigns, In Burkhan Khaldun around the year 1200
 margin_right = 40.0
 margin_bottom = 14.0
 script = ExtResource( 8 )
-
-[node name="ExperienceBar" parent="Level1/CanvasLayer" instance=ExtResource( 12 )]
-margin_left = 5.0
-margin_top = 50.0
-margin_right = 71.0
-margin_bottom = 114.0
-value = 50.0
 
 [node name="ScoreScene" parent="Level1" instance=ExtResource( 9 )]
 

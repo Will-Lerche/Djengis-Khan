@@ -52,9 +52,9 @@ text = "Controls"
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -243.0
-margin_top = 40.0
+margin_top = 105.0
 margin_right = -28.0
-margin_bottom = 90.0
+margin_bottom = 155.0
 rect_min_size = Vector2( 200, 0 )
 custom_colors/font_color = Color( 0.0862745, 0.517647, 0.866667, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -66,9 +66,9 @@ text = "Khan's Conquest:"
 
 [node name="Label2" type="Label" parent="ColorRect"]
 margin_left = 488.0
-margin_top = 40.0
+margin_top = 105.0
 margin_right = 788.0
-margin_bottom = 90.0
+margin_bottom = 155.0
 custom_colors/font_color = Color( 0.929412, 0.847059, 0.176471, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
