@@ -1157,13 +1157,13 @@ anchor_bottom = 1.0
 margin_top = 59.0
 margin_bottom = 99.0
 
-[node name="Label" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
-margin_left = -353.5
+[node name="Story_text" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
+margin_left = -387.0
 margin_top = -82.5
-margin_right = 353.5
+margin_right = 387.0
 margin_bottom = 82.5
-text = "Early Campaigns, In Burkhan Khaldun in the year 1200
-                      300 Merkits"
+text = "Early Campaigns, In Burkhan Khaldun around the year 1200
+                         300 Merkits"
 
 [node name="Xp_label" type="Label" parent="Level1/CanvasLayer"]
 anchor_left = 0.5
