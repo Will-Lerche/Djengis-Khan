@@ -12,6 +12,7 @@ var hp = 1000
 const BULLET_SPEED = 500
 const BULLET_DAMAGE = 1
 onready var bullet = preload("res://scenes/Projectiles.tscn")
+var cooldown = false
 
 
 
@@ -25,6 +26,8 @@ func _process(delta):
 	handle_input()
 
 func shoot():
+	if cooldown:
+		return
 	var direction = (get_global_mouse_position() - global_position).normalized()
 	var bullet_instance = bullet.instance()
 	get_parent().add_child(bullet_instance)
@@ -32,7 +35,12 @@ func shoot():
 	bullet_instance.velocity = direction * BULLET_SPEED
 	bullet_instance.global_position = global_position
 	$Djengis.play("Bue")
-	
+	cooldown = true
+	$ShootCooldown.start()
+
+func _on_ShootCooldown_timeout():
+	print(cooldown)
+	cooldown = false
 
 func handle_input():
 	

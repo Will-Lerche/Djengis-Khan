@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Horse-run Sheet.png" type="Texture" id=4]
@@ -227,6 +227,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=46]
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 4
@@ -250,7 +252,13 @@ playing = true
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
+[node name="ShootCooldown" type="Timer" parent="."]
+wait_time = 0.3
+
 [node name="Melee" type="Area2D" parent="."]
 
 [node name="MeleeHitbox" type="CollisionShape2D" parent="Melee"]
 position = Vector2( 2, 0 )
+shape = SubResource( 46 )
+
+[connection signal="timeout" from="ShootCooldown" to="." method="_on_ShootCooldown_timeout"]
