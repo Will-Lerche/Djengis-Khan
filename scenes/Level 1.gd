@@ -5,6 +5,7 @@ onready var _xp_label = $Level1/CanvasLayer/Xp_label
 onready var _bar = $Level1/CanvasLayer/ExperienceBar
 
 func _ready():
+	_bar.initialize(_player.experience, _player.experience_required)
 	_xp_label.update_text(_player.level, _player.experience, _player.experience_required)
 
 func _input(event):
