@@ -8,6 +8,7 @@ const SECRET_KEY = 1234567890
 var nonce = null
 var request_queue : Array = []
 var is_requesting : bool = false
+var lastAction = ""
 
 
 
@@ -92,21 +93,29 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 		print("Get nonce: " + response['response']['nonce'])
 		return	
 
+	match lastAction:
+		"get_scores":
+		#Koder der håndterer data fra databasen efter kald af get_scores
+			pass
+		"set_kills":
+		#Koder der håndterer retur fra databasen efter kald af set_kills
+			pass
+
 	#$TextEdit.set_text(response_body)
 
-	if response['response']['size'] > 0:
-		$TextEdit.set_text("")
-		for n in (response['response']['size']):
-			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['player_name']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\n")
-	else:	
-		$TextEdit.set_text("No data")
+	#if response['response']['size'] > 0:
+	#	$TextEdit.set_text("")
+	#	for n in (response['response']['size']):
+	#		$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['player_name']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\n")
+	#else:	
+	#	$TextEdit.set_text("No data")
 	
 	
 
 	
 func _submit_Time():
 	var user_name = $PlayerName.get_text()
-	var Time = $Time.get_text()
+	var gametime = $Time.get_text()
 	var command = "set_time"
 	var data = {"username" : user_name, "time" : Time}
 	request_queue.push_back({"command" : command, "data" : data})
@@ -117,13 +126,17 @@ func _set_Times():
 	request_queue.push_back({"command" : command, "data" : data})
 	print("get Times")
 
-func _set_player():
-	var user_id = $ID.get_text()
-	var command = "get_player"
-	var data = {"user_id" : user_id}
+func _get_scores():
+	lastAction = "get_scores"
+	var score_offset = 0
+	var score_number = 10
+	
+	var command = "get_scores"
+	var data = {"score_offset" : score_offset, "score_number" : score_number}
 	request_queue.push_back({"command" : command, "data" : data})
 
 func _set_kills():
+	lastAction = "set_kills"
 	var username = "test"
 	var kills = "123456"
 	var gametime = "100"
