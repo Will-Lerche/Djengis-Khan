@@ -1,8 +1,8 @@
 extends Node2D
 
-onready var _player = $Player
-onready var _xp_label = $CanvasLayer/Xp_label
-onready var _bar = $CanvasLayer/ExperienceBar
+onready var _player = $Level1/Player
+onready var _xp_label = $Level1/CanvasLayer/Xp_label
+onready var _bar = $Level1/CanvasLayer/ExperienceBar
 
 func _ready():
 	_xp_label.update_text(_player.level, _player.experience, _player.experience_required)
