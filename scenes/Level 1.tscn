@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Projectiles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Level 1.gd" type="Script" id=3]
 [ext_resource path="res://Gui/Hotbar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Gui/Health.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Level1tekst.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Enemyspawner.tres.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Xp_label.gd" type="Script" id=8]
 [ext_resource path="res://assets/Pixelart test tilemap.png" type="Texture" id=11]
 
 [sub_resource type="TileSet" id=1]
@@ -1103,6 +1105,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 2/z_index = 0
 
 [node name="Level 1" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Environment" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -1124,6 +1127,7 @@ collision_mask = 2
 [node name="Projectiles" parent="." instance=ExtResource( 2 )]
 
 [node name="Enemyspawner" type="Timer" parent="."]
+wait_time = 0.75
 autostart = true
 script = ExtResource( 7 )
 
@@ -1158,5 +1162,13 @@ margin_left = 0.0
 margin_top = 0.0
 margin_right = 468.0
 margin_bottom = 165.0
+
+[node name="Xp_label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 14.0
+script = ExtResource( 8 )
 
 [connection signal="timeout" from="Enemyspawner" to="Enemyspawner" method="_on_Enemyspawner_timeout"]
