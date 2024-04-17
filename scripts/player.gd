@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal experience_gained(growth_data)
+
 class_name Player
 
 const bulletPath = preload("res://scenes/Projectiles.tscn")
@@ -118,9 +120,13 @@ func get_required_experience(level):
 func gain_experience(amount):
 	experience_total += amount 
 	experience += amount
+	var growth_data = []
 	while experience >= experience_required:
 		experience -= experience_required
+		growth_data.append([experience_required, experience_required])
 		level_up()
+	growth_data.append([experience, experience_required])
+	emit_signal("experience_gained",growth_data)
 
 func level_up():
 	level += 1
