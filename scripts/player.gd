@@ -14,22 +14,21 @@ onready var bullet = preload("res://scenes/Projectiles.tscn")
 
 func _process(delta):
 	
-	
 	if velo.length() < 1:
 		$Horse.play("Idle")
-		$Djengis.play("Idle Bue")
-	
+		if $Djengis.frames.get_frame_count($Djengis.animation)-1==$Djengis.frame:
+			$Djengis.play("Idle Bue")
 	#$Player.look_at(get_global_mouse_position())
 	handle_input()
 
 func shoot():
-
 	var direction = (get_global_mouse_position() - global_position).normalized()
 	var bullet_instance = bullet.instance()
 	get_parent().add_child(bullet_instance)
 	bullet_instance.look_at (direction)
 	bullet_instance.velocity = direction * BULLET_SPEED
 	bullet_instance.global_position = global_position
+	$Djengis.play("Bue")
 	
 
 func handle_input():
@@ -43,12 +42,16 @@ func handle_input():
 	if Input.is_action_pressed("right"):
 		velo.x += 1
 		direction = Vector2(0, 1)
+		$Horse.flip_h = false
 		$Horse.play("Run")
+		$Djengis.flip_h = false
 		$Djengis.play("Idle Bue")
 	if Input.is_action_pressed("left"):
 		velo.x -= 1
 		direction = Vector2(-1, 0)
+		$Horse.flip_h = true
 		$Horse.play("Run")
+		$Djengis.flip_h = true
 		$Djengis.play("Idle Bue")
 	if Input.is_action_pressed("down"):
 		velo.y += 1

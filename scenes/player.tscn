@@ -196,8 +196,8 @@ region = Rect2( 320, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=45]
 animations = [ {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 23 ) ],
+"loop": false,
 "name": "Bue",
 "speed": 5.0
 }, {
@@ -206,7 +206,7 @@ animations = [ {
 "name": "Bue skift",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 32 ) ],
 "loop": true,
 "name": "Idle Bue",
 "speed": 5.0

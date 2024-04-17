@@ -107,20 +107,28 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 func _submit_Time():
 	var user_name = $PlayerName.get_text()
 	var Time = $Time.get_text()
-	var command = "add_Time"
-	var data = {"username" : user_name, "Time" : Time}
+	var command = "set_time"
+	var data = {"username" : user_name, "time" : Time}
 	request_queue.push_back({"command" : command, "data" : data})
 	
-func _get_Times():
-	var command = "get_Times"
+func _set_Times():
+	var command = "set_Times"
 	var data = {"Time_ofset" : 0, "Time_number" : 10}
 	request_queue.push_back({"command" : command, "data" : data})
 	print("get Times")
 
-func _get_player():
+func _set_player():
 	var user_id = $ID.get_text()
 	var command = "get_player"
 	var data = {"user_id" : user_id}
+	request_queue.push_back({"command" : command, "data" : data})
+
+func _set_kills():
+	var username = "test"
+	var kills = "123456"
+	var gametime = "100"
+	var command = "set_kills"
+	var data = {"username" : username, "kills" : kills, "time" : gametime}
 	request_queue.push_back({"command" : command, "data" : data})
 
 

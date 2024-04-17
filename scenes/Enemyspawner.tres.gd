@@ -33,8 +33,6 @@ func _on_Enemyspawner_timeout():
 	
 	get_parent().add_child(enemy)
 	
-	print("Enemyspawn ", enemy.position)
-	
 	#enemy.global_position = get_parent().global_position 
 
 
