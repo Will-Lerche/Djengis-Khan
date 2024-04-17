@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Metrofutura.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/Button.gd" type="Script" id=2]
+[ext_resource path="res://assets/Metrofutura.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 3 )
 
 [node name="WinScene" type="Control"]
 anchor_right = 1.0
@@ -21,18 +26,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
-text = " 
- After Genghis and his follow tribesmen fought off the merkits, 
+text = "
+
+
+
+ After Genghis and his fellow 
+
+ tribesmen fought off the merkits, 
+ 
  it became clear there were too many of them,
- and as a result, Genghis alongside his brother and wife on the Burkhan Khaldun"
+
+ and as a result, Genghis alongside his brother and wife hid 
+ on the Mountain of Burkhan Khaldun"
 uppercase = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 436.0
-margin_top = 520.0
-margin_right = 600.0
-margin_bottom = 599.0
-text = "Save and Continue"
+margin_left = 794.0
+margin_top = 92.0
+margin_right = 928.0
+margin_bottom = 155.0
+text = "Save Score"
 script = ExtResource( 2 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 45.0
+margin_right = 459.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+text = "CAMPAIGN WON!"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
