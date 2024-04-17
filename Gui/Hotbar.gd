@@ -1,5 +1,5 @@
 extends HBoxContainer
-
+var ha = 0
 var hotbar_slots : Array
 
 
@@ -10,7 +10,8 @@ func _ready():
 	hotbar_slots = [$HotbarSlot, $HotbarSlot2]
 
 func _process(delta):
-	pass 
+	weNeed(delta)
+
 
 func _input(event):
 	if event is InputEventKey: 
@@ -34,3 +35,8 @@ func switch_to_slot(slot_index):
 		
 		
 		current_slot = slot_index
+
+func weNeed(var yes):
+	if ha == 6 :
+		yes=5
+	ha= ha + 1
