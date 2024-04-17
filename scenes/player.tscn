@@ -202,7 +202,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
-"loop": false,
+"loop": true,
 "name": "Bue skift",
 "speed": 5.0
 }, {
@@ -222,7 +222,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
-"loop": false,
+"loop": true,
 "name": "Melee skift",
 "speed": 5.0
 } ]

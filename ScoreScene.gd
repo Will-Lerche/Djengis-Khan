@@ -16,3 +16,4 @@ func _on_Enemies_body_entered(body):
 	if body.get_class() == "Projectile":
 		Kinesere_skudt = Kinesere_skudt + 1
 		$ScoreCount.text = "Kineser drabt: " + str(Kinesere_skudt)
+		print("Kinesereskudt " + str(Kinesere_skudt))
