@@ -6,11 +6,11 @@ var hp = 5
 
 var playerContact : Player = null
 
-
 func take_damage(damage):
 	hp -= damage
 	if hp <= 0:
 		queue_free()
+		
 
 func _physics_process(delta):
 	var player = get_parent().get_node("Player")
