@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/Enemies.gd"
 }, {
-"base": "TileMap",
-"class": "MainMap",
-"language": "GDScript",
-"path": "res://scenes/MainMap.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -31,7 +26,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Enemy": "",
-"MainMap": "",
 "Player": "",
 "Projectile": ""
 }
@@ -39,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Djengis Khan"
-run/main_scene="res://scenes/MainScene.tscn"
+run/main_scene="res://scenes/Startscreen.tscn"
 config/use_hidden_project_data_directory=false
 config/icon="res://icon.png"
 
