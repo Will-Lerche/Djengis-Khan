@@ -37,6 +37,11 @@ run/main_scene="res://scenes/Startscreen.tscn"
 config/use_hidden_project_data_directory=false
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
