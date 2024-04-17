@@ -18,5 +18,5 @@ func _ready():
 
 func _on_Button_pressed():
 	#Noget database lort
-	get_tree().change_scene_to(load("res://scenes/MainScene.tscn"))
+	get_tree().change_scene_to(load("res://scenes/Startscreen.tscn"))
 	pass # Replace with function body.
