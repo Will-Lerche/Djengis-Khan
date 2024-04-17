@@ -12,3 +12,4 @@ func _ready():
 
 func get_class():
 	return "MainMap"
+
