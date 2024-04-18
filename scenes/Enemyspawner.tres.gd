@@ -1,7 +1,7 @@
 extends Timer
 
 var enemy_scene = preload("res://scenes/Enemies.tscn")
-var enemies = 120
+var enemies = 20
 
 func _ready():
 	print("timer ready")

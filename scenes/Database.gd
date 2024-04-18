@@ -82,6 +82,7 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	
 	var response_body = _body.get_string_from_utf8()
 	#$TextEdit.set_text(response_body)
+	print(response_body)
 	var response = parse_json(response_body)
 
 	if response['error'] != "none":
@@ -92,6 +93,10 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 		nonce = response['response']['nonce']
 		print("Get nonce: " + response['response']['nonce'])
 		return	
+
+	if response['response']['size'] > 0:
+		for n in (response['response']['size']):
+			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['username']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\t\t" + String(response['response'][String(n)]['Kills']) +"\n")
 
 	match lastAction:
 		"get_scores":
@@ -130,18 +135,17 @@ func _get_scores():
 	lastAction = "get_scores"
 	var score_offset = 0
 	var score_number = 10
-	
 	var command = "get_scores"
 	var data = {"score_offset" : score_offset, "score_number" : score_number}
 	request_queue.push_back({"command" : command, "data" : data})
 
 func _set_kills():
 	lastAction = "set_kills"
-	var username = "test"
-	var kills = "123456"
-	var gametime = "100"
+	var username = $PlayerName.text
+	var kills = $Kills.text
+	var gametime = "69"
 	var command = "set_kills"
-	var data = {"username" : username, "kills" : kills, "time" : gametime}
+	var data = {"username" : username, "Kills" : kills, "Time" : gametime}
 	request_queue.push_back({"command" : command, "data" : data})
 
 
@@ -161,4 +165,8 @@ func _on_GetTimes_pressed():
 
 
 func _on_AddTime_pressed():
+	pass # Replace with function body.
+
+
+func _on_GetScores_pressed():
 	pass # Replace with function body.
