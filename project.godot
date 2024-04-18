@@ -37,6 +37,10 @@ run/main_scene="res://scenes/Startscreen.tscn"
 config/use_hidden_project_data_directory=false
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scenes/Global.gd"
+
 [display]
 
 window/size/width=1920

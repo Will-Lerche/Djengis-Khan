@@ -12,8 +12,8 @@ var playerContact : Player = null
 func take_damage(damage):
 	hp -= damage
 	if hp <= 0:
+		Global.Kill_count = Global.Kill_count+1
 		queue_free()
-		
 
 func _physics_process(delta):
 	if !is_instance_valid(player):

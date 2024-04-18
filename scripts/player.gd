@@ -27,8 +27,7 @@ func _process(delta):
 			1:
 				$Djengis.play("Melee")
 				melee()
-	
-	print(velo.length())
+
 	if velo.length() < 0.5:
 		$Horse.play("Idle")
 	else:
