@@ -227,7 +227,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=46]
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 27.875, 28.2344 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 4
@@ -258,7 +259,8 @@ wait_time = 0.3
 [node name="Melee" type="Area2D" parent="."]
 
 [node name="MeleeHitbox" type="CollisionShape2D" parent="Melee"]
-position = Vector2( 2, 0 )
+position = Vector2( 24.125, -14.7656 )
 shape = SubResource( 46 )
 
+[connection signal="animation_finished" from="Djengis" to="." method="_on_Djengis_animation_finished"]
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_ShootCooldown_timeout"]

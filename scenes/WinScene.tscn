@@ -39,10 +39,10 @@ text = "
 uppercase = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 794.0
-margin_top = 92.0
-margin_right = 928.0
-margin_bottom = 155.0
+margin_left = 43.0
+margin_top = 492.0
+margin_right = 177.0
+margin_bottom = 555.0
 text = "Restart"
 script = ExtResource( 2 )
 
@@ -58,6 +58,6 @@ text = "CAMPAIGN WON!"
 position = Vector2( 1, 0 )
 anchor_mode = 0
 current = true
-zoom = Vector2( 0.7, 0.7 )
+zoom = Vector2( 0.7, 0.75 )
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

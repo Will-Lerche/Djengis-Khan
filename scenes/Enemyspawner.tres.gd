@@ -1,7 +1,7 @@
 extends Timer
 
 var enemy_scene = preload("res://scenes/Enemies.tscn")
-var enemies = 20
+var enemies = 40
 
 func _ready():
 	pass
@@ -27,12 +27,7 @@ func _on_Enemyspawner_timeout():
 
 	enemy.position = Vector2(rndX,rndY)
 
-	
-	enemy.global_position = Vector2(rndX, rndY) + $"../Player".global_position
+	if get_node("../Player")!=null:
+		enemy.global_position = Vector2(rndX, rndY) + $"../Player".global_position
 	
 	get_parent().add_child(enemy)
-	
-	#enemy.global_position = get_parent().global_position 
-
-
-

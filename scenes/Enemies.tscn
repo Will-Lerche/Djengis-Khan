@@ -84,7 +84,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Enemies" type="Area2D"]
+[node name="Enemies" type="Area2D" groups=["Hit"]]
 collision_layer = 2
 script = ExtResource( 1 )
 

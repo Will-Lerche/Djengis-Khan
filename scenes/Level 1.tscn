@@ -1229,7 +1229,7 @@ collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="Level1/Player"]
 
-[node name="Enemyspawner" type="Timer" parent="Level1"]
+[node name="Enemyspawner" type="Timer" parent="Level1" groups=["Hit2"]]
 wait_time = 0.75
 autostart = true
 script = ExtResource( 7 )
@@ -1284,11 +1284,11 @@ margin_bottom = 81.0
 
 [node name="Story_text" parent="Level1/CanvasLayer" instance=ExtResource( 6 )]
 margin_left = -387.0
-margin_top = -82.5
+margin_top = -190.0
 margin_right = 387.0
-margin_bottom = 82.5
+margin_bottom = -25.0
 text = "Early Campaigns, In Burkhan Khaldun around the year 1200
-                         300 Merkits"
+                  Djengis vs the Merkits"
 
 [node name="Xp_label" type="Label" parent="Level1/CanvasLayer"]
 margin_right = 40.0

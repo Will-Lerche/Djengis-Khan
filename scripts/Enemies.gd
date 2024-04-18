@@ -2,6 +2,9 @@ extends Area2D
 class_name Enemy
 
 export var speed = 50
+
+onready var player = get_parent().get_node("Player")
+
 var hp = 5
 
 var playerContact : Player = null
@@ -13,28 +16,23 @@ func take_damage(damage):
 		
 
 func _physics_process(delta):
-	var player = get_parent().get_node("Player")
+	if !is_instance_valid(player):
+		return
 	
-	#print("beregn enemy position")
-	#position = position - position.normalized()
-	$Enemy.play("Idle")
-#
-		
-
 	if playerContact != null:
 		playerContact.take_damage(1)
 
-	if player != null:
-		var player_position = player.position
-		var target_position = (player_position - position).normalized()
+	var player_position = player.position
+	var target_position = (player_position - position).normalized()
 
 
-		if position.distance_to(player_position) > 3:
-			target_position = position - player_position
-			position = position - target_position.normalized()
-
-		if position.distance_to(player_position) < 2:
-			$Enemy.play("Attack")
+	if position.distance_to(player_position) > 25:
+		$Enemy.play("Idle")
+		target_position = position - player_position
+		position = position - target_position.normalized()
+		
+	else: 
+		$Enemy.play("Attack")
 
 func get_class():
 	return "Enemy"
@@ -46,11 +44,15 @@ func _on_Enemies_body_entered(body):
 		
 	if body.get_class() == "Projectile":
 		take_damage(1)
-		
-	pass
 
 
 func _on_Enemies_body_exited(body):
 	if body.get_class() == "Player":
 		playerContact = null
+
+
+func melee(body):
+	if body.get_class() == "Player":
+		playerContact = null
 	pass
+
