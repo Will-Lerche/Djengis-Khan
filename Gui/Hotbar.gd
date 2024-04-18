@@ -18,10 +18,11 @@ func _input(event):
 		if event.pressed:
 			if Input.is_action_pressed("Hotbar_slot_1"):
 				switch_to_slot(0)
-				get_parent().get_parent().get_node("Player").get_node("Djengis").play("Bue")
+				get_parent().get_parent().get_node("Player").get_node("Djengis").play("Bue skift")
 				
 			elif Input.is_action_pressed("Hotbar_slot_2"):
 				switch_to_slot(1)
+				get_parent().get_parent().get_node("Player").get_node("Djengis").play("Melee skift")
 			
 			elif Input.is_action_pressed("Hotbar_slot_3"):
 				switch_to_slot(2)
@@ -29,6 +30,8 @@ func _input(event):
 			elif Input.is_action_pressed("ui_accept") and current_slot == 0:
 				get_parent().get_parent().get_node("Player").shoot()
 			
+			elif Input.is_action_pressed("ui_accept") and current_slot == 1:
+				get_parent().get_parent().get_node("Player").attack()
 
 func switch_to_slot(slot_index):
 	if slot_index != current_slot:
