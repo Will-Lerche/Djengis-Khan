@@ -4,7 +4,6 @@ var enemy_scene = preload("res://scenes/Enemies.tscn")
 var enemies = 20
 
 func _ready():
-	print("timer ready")
 	pass
 
 func _process(delta):
@@ -13,7 +12,6 @@ func _process(delta):
 
 func _on_Enemyspawner_timeout():
 	
-	print ("timeout")
 	if enemies == 0:
 		get_tree().change_scene_to(load("res://scenes/WinScene.tscn")) 
 		
