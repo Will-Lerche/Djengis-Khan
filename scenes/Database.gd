@@ -97,7 +97,7 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 
 	if response['response']['size'] > 0:
 		for n in (response['response']['size']):
-			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['username']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\t\t" + String(response['response'][String(n)]['Kills']) +"\n")
+			$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['username']) + "\t\t" + String(response['response'][String(n)]['Kills']) +"\n")
 
 	match lastAction:
 		"get_scores":
@@ -132,10 +132,10 @@ func _get_scores():
 func _set_kills():
 	lastAction = "set_kills"
 	var username = $PlayerName.text
-	var kills = $Kills.text
+	var kills = $KillCount.text
 	var gametime = "69"
 	var command = "set_kills"
-	var data = {"username" : username, "Kills" : kills, "Time" : gametime}
+	var data = {"username" : username, "Kills" : kills} #, "Time" : gametime}
 	request_queue.push_back({"command" : command, "data" : data})
 
 
