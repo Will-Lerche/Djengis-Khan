@@ -38,22 +38,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -474.5
-margin_top = -178.5
-margin_right = 474.5
-margin_bottom = 178.5
+margin_left = -478.0
+margin_top = -220.0
+margin_right = 471.0
+margin_bottom = 251.0
 custom_fonts/font = SubResource( 1 )
 text = "Use WASD To Move
 
 Press 1 or 2 to switch between weapons
+
+Use space to attack 
 "
 
 [node name="Button" type="Button" parent="."]
-margin_right = 71.0
-margin_bottom = 56.0
+margin_left = 1213.0
+margin_top = 651.0
+margin_right = 1446.0
+margin_bottom = 779.0
 custom_fonts/font = SubResource( 2 )
 text = "Back"
 icon = ExtResource( 3 )
 flat = true
+icon_align = 1
+expand_icon = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
