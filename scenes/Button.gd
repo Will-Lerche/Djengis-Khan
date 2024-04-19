@@ -1,6 +1,6 @@
 extends Button
 
-func _on_BackButton_pressed():
+func _on_Button_pressed():
 	get_tree().change_scene_to(load("res://scenes/Startscreen.tscn"))
 
 
