@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Metrofutura.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scenes/Button.gd" type="Script" id=2]
+[ext_resource path="res://scenes/WinScene.gd" type="Script" id=2]
 [ext_resource path="res://assets/Metrofutura.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -15,6 +15,7 @@ font_data = ExtResource( 3 )
 [node name="WinScene" type="Control"]
 margin_right = 1920.0
 margin_bottom = 1080.0
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
@@ -38,13 +39,20 @@ text = "
  on the Mountain \"Burkhan Khaldun\""
 uppercase = true
 
-[node name="Button" type="Button" parent="."]
-margin_left = 43.0
+[node name="BackButton" type="Button" parent="."]
+margin_left = 40.0
 margin_top = 492.0
-margin_right = 177.0
-margin_bottom = 555.0
+margin_right = 174.0
+margin_bottom = 556.0
 text = "Restart"
-script = ExtResource( 2 )
+
+[node name="SaveScoreButton" type="Button" parent="."]
+margin_left = 830.0
+margin_top = 492.0
+margin_right = 964.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 134, 64 )
+text = "Save Score"
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 28.0
@@ -60,4 +68,5 @@ anchor_mode = 0
 current = true
 zoom = Vector2( 0.7, 0.75 )
 
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="SaveScoreButton" to="." method="_on_SaveScoreButton_pressed"]

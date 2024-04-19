@@ -14,6 +14,7 @@ var lastAction = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$KillCount.text = str(Global.Kill_count)
 	randomize()
 	add_child(http_request)
 	http_request.connect("request_completed",self,"_http_request_completed")
@@ -105,17 +106,6 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 		"set_kills":
 		#Koder der håndterer retur fra databasen efter kald af set_kills
 			pass
-
-	#$TextEdit.set_text(response_body)
-
-	#if response['response']['size'] > 0:
-	#	$TextEdit.set_text("")
-	#	for n in (response['response']['size']):
-	#		$TextEdit.set_text($TextEdit.get_text() + String(response['response'][String(n)]['player_name']) + "\t\t" + String(response['response'][String(n)]['Time']) + "\n")
-	#else:	
-	#	$TextEdit.set_text("No data")
-	
-	
 
 	
 func _submit_Time():
