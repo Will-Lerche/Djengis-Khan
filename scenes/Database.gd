@@ -133,9 +133,8 @@ func _set_kills():
 	lastAction = "set_kills"
 	var username = $PlayerName.text
 	var kills = $KillCount.text
-	var gametime = "69"
 	var command = "set_kills"
-	var data = {"username" : username, "Kills" : kills} #, "Time" : gametime}
+	var data = {"username" : username, "Kills" : kills}
 	request_queue.push_back({"command" : command, "data" : data})
 
 
