@@ -1288,7 +1288,7 @@ margin_top = -190.0
 margin_right = 387.0
 margin_bottom = -25.0
 text = "Early Campaigns, In Burkhan Khaldun around the year 1200
-                  Djengis vs the Merkits"
+                  Genghis vs the Merkits"
 
 [node name="Xp_label" type="Label" parent="Level1/CanvasLayer"]
 margin_right = 40.0
