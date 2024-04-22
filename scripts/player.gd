@@ -49,7 +49,6 @@ func melee():
 						area.take_damage(5)
 
 func _on_ShootCooldown_timeout():
-	print(cooldown)
 	cooldown = false
 
 func handle_input():
