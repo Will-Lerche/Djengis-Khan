@@ -1,7 +1,6 @@
 tool
 extends TextureProgress
 
-
 func initialize(current,maximum):
 	max_value = maximum
 	value = current 

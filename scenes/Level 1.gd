@@ -1,6 +1,6 @@
 extends Node2D
 
-#onready var _player = $Level1/Player
+onready var _player = $Level1/Player
 #onready var _xp_label = $Level1/CanvasLayer/Xp_label
 #onready var _bar = $Level1/CanvasLayer/ExperienceBar
 

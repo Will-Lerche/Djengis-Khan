@@ -112,8 +112,8 @@ func _physics_process(delta):
 		#	Level1()
 
 
-#func get_class():
-	#return "Player"
+func get_class():
+	return "Player"
 #func Level1():
 #	get_tree().change_scene_to(load("res://scenes/Level 1.tscn"))
 
