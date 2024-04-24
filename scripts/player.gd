@@ -108,39 +108,39 @@ func _physics_process(delta):
 			take_damage(BULLET_DAMAGE)
 		if collider.get_class() == "Enemy":
 			take_damage(BULLET_DAMAGE)
-		elif collider.get_class() == "MainMap":
-			Level1()
+		#elif collider.get_class() == "MainMap":
+		#	Level1()
 
 
-func get_class():
-	return "Player"
-func Level1():
-	get_tree().change_scene_to(load("res://scenes/Level 1.tscn"))
+#func get_class():
+	#return "Player"
+#func Level1():
+#	get_tree().change_scene_to(load("res://scenes/Level 1.tscn"))
 
 #level system
-export (int) var level = 1
+#export (int) var level = 1
 
-var experience = 0
-var experience_total = 0 
-var experience_required = get_required_experience(level + 1)
+#var experience = 0
+#var experience_total = 0 
+#var experience_required = get_required_experience(level + 1)
 
-func get_required_experience(level):
-	return round (pow(level, 1.8) + level * 4)
+#func get_required_experience(level):
+#	return round (pow(level, 1.8) + level * 4)
 
-func gain_experience(amount):
-	experience_total += amount 
-	experience += amount
-	var growth_data = []
-	while experience >= experience_required:
-		experience -= experience_required
-		growth_data.append([experience_required, experience_required])
-		level_up()
-	growth_data.append([experience, experience_required])
-	emit_signal("experience_gained",growth_data)
+#func gain_experience(amount):
+#	experience_total += amount 
+#	experience += amount
+#	var growth_data = []
+#	while experience >= experience_required:
+#		experience -= experience_required
+#		growth_data.append([experience_required, experience_required])
+#		level_up()
+#	growth_data.append([experience, experience_required])
+#	emit_signal("experience_gained",growth_data)
 
-func level_up():
-	level += 1
-	experience_required = get_required_experience(level + 1)
+#func level_up():
+#	level += 1
+#	experience_required = get_required_experience(level + 1)
 
 func _on_Djengis_animation_finished():
 	match $"../CanvasLayer/Hotbar".current_slot:
