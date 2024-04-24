@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Metrofutura.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/WinScene.gd" type="Script" id=2]
+[ext_resource path="res://assets/Metrofutura.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 3 )
+
+[node name="WinScene" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 782.0
+margin_bottom = 467.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "
+
+
+
+ After Genghis and his fellow tribesmen fought off the merkits 
+ 
+ It became clear there were too many of them
+
+ As a result, Genghis alongside his brother and wife, hid 
+ on the Mountain \"Burkhan Khaldun\""
+uppercase = true
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 40.0
+margin_top = 492.0
+margin_right = 174.0
+margin_bottom = 556.0
+text = "Restart"
+
+[node name="SaveScoreButton" type="Button" parent="."]
+margin_left = 830.0
+margin_top = 492.0
+margin_right = 964.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 134, 64 )
+text = "Save Score"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 45.0
+margin_right = 459.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+text = "CAMPAIGN WON!"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1, 0 )
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.7, 0.75 )
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="SaveScoreButton" to="." method="_on_SaveScoreButton_pressed"]
